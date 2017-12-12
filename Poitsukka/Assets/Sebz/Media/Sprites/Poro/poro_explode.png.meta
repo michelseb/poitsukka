@@ -1,0 +1,288 @@
+fileFormatVersion: 2
+guid: 5c87eab8bbb5ea64692ddbf4dbccb414
+timeCreated: 1513120447
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: body
+    21300002: head
+    21300004: back_top_right
+    21300006: back_top_left
+    21300008: front_top_right
+    21300010: front_top_left
+    21300012: back_bottom_right
+    21300014: back_bottom_left
+    21300016: front_bottom_right
+    21300018: front_bottom_left
+    21300020: back_right_top
+    21300022: back_left_top
+    21300024: front_right_top
+    21300026: front_left_top
+    21300028: back_right_middle
+    21300030: back_left_middle
+    21300032: front_right_middle
+    21300034: front_left_middle
+    21300036: back_right_bottom
+    21300038: back_left_bottom
+    21300040: front_right_bottom
+    21300042: front_left_bottom
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: body
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 230
+        width: 269
+        height: 133
+      alignment: 9
+      pivot: {x: 0.54460967, y: 0.124060154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 230
+        width: 189
+        height: 239
+      alignment: 9
+      pivot: {x: 0.023809684, y: 0.4330544}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_right_top
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 125
+        width: 81
+        height: 84
+      alignment: 9
+      pivot: {x: 0.8868315, y: 0.94444466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_left_top
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 133
+        width: 62
+        height: 72
+      alignment: 9
+      pivot: {x: 0.6555557, y: 0.87179506}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front_right_top
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 126
+        width: 60
+        height: 79
+      alignment: 9
+      pivot: {x: 0.58130103, y: 0.96666694}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front_left_top
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 127
+        width: 60
+        height: 57
+      alignment: 9
+      pivot: {x: 0.36666718, y: 0.9093569}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_right_middle
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 51
+        width: 38
+        height: 72
+      alignment: 9
+      pivot: {x: 0.4824563, y: 0.8333333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_left_middle
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 38
+        width: 49
+        height: 73
+      alignment: 9
+      pivot: {x: 0.38888898, y: 0.9}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front_right_middle
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 49
+        width: 26
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5256418, y: 0.97619045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front_left_middle
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 44
+        width: 56
+        height: 44
+      alignment: 9
+      pivot: {x: 0.3214291, y: 0.98484856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_right_bottom
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 3
+        width: 31
+        height: 64
+      alignment: 9
+      pivot: {x: 0.8440864, y: 0.76296294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_left_bottom
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 4
+        width: 54
+        height: 30
+      alignment: 9
+      pivot: {x: 0.2530865, y: 0.9666665}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front_right_bottom
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 7
+        width: 47
+        height: 40
+      alignment: 9
+      pivot: {x: 0.35815623, y: 0.9666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: front_left_bottom
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 7
+        width: 42
+        height: 34
+      alignment: 9
+      pivot: {x: 0.19841367, y: 0.9901959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

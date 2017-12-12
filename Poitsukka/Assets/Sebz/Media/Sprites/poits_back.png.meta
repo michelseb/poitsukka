@@ -1,0 +1,294 @@
+fileFormatVersion: 2
+guid: cb4901c040ffb5b4ba0a362378a98026
+timeCreated: 1510529817
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: hair
+    21300002: lowerArm1
+    21300004: neck
+    21300006: upperLeg2
+    21300008: upperLeg1
+    21300010: upperArm1
+    21300012: trunc
+    21300014: rightArm
+    21300016: leftArm
+    21300018: upperArm2
+    21300020: lowerLeg2
+    21300022: foot2
+    21300024: lowerLeg1
+    21300026: lowerArm2
+    21300028: foot1
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hair
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 453
+        width: 85
+        height: 89
+      alignment: 9
+      pivot: {x: 0.5142245, y: 0.06527059}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lowerArm1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 454
+        width: 35
+        height: 57
+      alignment: 9
+      pivot: {x: 0.60363597, y: 0.98787755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: neck
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 499
+        width: 30
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.14438404}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: upperLeg2
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 316
+        width: 51
+        height: 83
+      alignment: 9
+      pivot: {x: 0.5237074, y: 0.9661545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: upperLeg1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 305
+        width: 50
+        height: 85
+      alignment: 9
+      pivot: {x: 0.5, y: 0.926737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: upperArm1
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 332
+        width: 30
+        height: 58
+      alignment: 9
+      pivot: {x: 0.5403035, y: 0.9586197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: trunc
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 85
+        width: 73
+        height: 155
+      alignment: 9
+      pivot: {x: 0.4668742, y: 0.03196549}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightArm
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 227
+        width: 19
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.90302914}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: leftArm
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 226
+        width: 20
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49999848, y: 0.97859764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: upperArm2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 232
+        width: 31
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5780049, y: 0.9579884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lowerLeg2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 66
+        width: 49
+        height: 137
+      alignment: 9
+      pivot: {x: 0.524675, y: 0.9765752}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foot2
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 119
+        width: 51
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5237074, y: 0.91947937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lowerLeg1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 63
+        width: 48
+        height: 136
+      alignment: 9
+      pivot: {x: 0.55037814, y: 0.9800794}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lowerArm2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 131
+        width: 34
+        height: 62
+      alignment: 9
+      pivot: {x: 0.535562, y: 0.98753554}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: foot1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 53
+        width: 51
+        height: 48
+      alignment: 9
+      pivot: {x: 0.4999994, y: 0.97859716}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

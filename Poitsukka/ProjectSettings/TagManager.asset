@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - parallable
+  - Staying
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Characters
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: backgroundGrounds
+    uniqueID: 2246729621
+    locked: 0
+  - name: backgrounds
+    uniqueID: 4205463625
+    locked: 0
+  - name: ground
+    uniqueID: 1713862311
+    locked: 0
+  - name: interactableLayer
+    uniqueID: 3915746401
+    locked: 0
+  - name: VeryFront
+    uniqueID: 937707017
+    locked: 0

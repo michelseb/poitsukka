@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: 7351048c41951c6468aa6b6913acfea0
+timeCreated: 1511119666
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "p\xF6ll\xF6_0322_0"
+    21300002: "p\xF6ll\xF6_0322_1"
+    21300004: "p\xF6ll\xF6_0322_2"
+    21300006: "p\xF6ll\xF6_0322_3"
+    21300008: "p\xF6ll\xF6_0322_4"
+    21300010: "p\xF6ll\xF6_0322_5"
+    21300012: "p\xF6ll\xF6_0322_6"
+    21300014: "p\xF6ll\xF6_0322_7"
+    21300016: "p\xF6ll\xF6_0322_8"
+    21300018: "p\xF6ll\xF6_0322_9"
+    21300020: "p\xF6ll\xF6_0322_10"
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 1
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 233
+        height: 154
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_1"
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 4
+        width: 225
+        height: 162
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_2"
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 4
+        width: 217
+        height: 175
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_3"
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 4
+        width: 219
+        height: 180
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_4"
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 4
+        width: 219
+        height: 188
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_5"
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 4
+        width: 226
+        height: 193
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_6"
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 4
+        width: 219
+        height: 198
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_7"
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 4
+        width: 212
+        height: 205
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_8"
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 2
+        width: 134
+        height: 209
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_9"
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 2
+        width: 84
+        height: 203
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "p\xF6ll\xF6_0322_10"
+      rect:
+        serializedVersion: 2
+        x: 2329
+        y: 4
+        width: 78
+        height: 201
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
