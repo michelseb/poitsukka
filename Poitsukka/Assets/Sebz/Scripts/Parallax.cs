@@ -11,6 +11,7 @@ public class Parallax : MonoBehaviour {
     float[] speeds;
     Color col;
     public float smoothing;
+    public bool active;
     GameObject ground_talvi, ground_kesä, ground_kevät, ground_syksy;
 
     private void Awake()
@@ -23,6 +24,7 @@ public class Parallax : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
+        active = true;
         ground_talvi = GameObject.Find("ground_talvi");
         ground_kesä = GameObject.Find("ground_kesä");
         ground_kevät = GameObject.Find("ground_kevät");
@@ -64,17 +66,20 @@ public class Parallax : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        for (int i = 0; i < objets.Length; i++)
+        if (active)
         {
-            if (objets[i].GetComponent<SpriteRenderer>().sortingLayerName != "interactableLayer")
+            for (int i = 0; i < objets.Length; i++)
             {
-                float parallaxX = (previousPos.x - transform.position.x) * speeds[i];
-                float parallaxY = (previousPos.y - transform.position.y) * speeds[i];
-                float posXToBe = objets[i].transform.position.x + parallaxX;
-                float posYToBe = objets[i].transform.position.y + parallaxY;
+                if (objets[i].GetComponent<SpriteRenderer>().sortingLayerName != "interactableLayer")
+                {
+                    float parallaxX = (previousPos.x - transform.position.x) * speeds[i];
+                    float parallaxY = (previousPos.y - transform.position.y) * speeds[i];
+                    float posXToBe = objets[i].transform.position.x + parallaxX;
+                    float posYToBe = objets[i].transform.position.y + parallaxY;
 
-                Vector3 posToBe = new Vector3(posXToBe, posYToBe, objets[i].transform.position.z);
-                objets[i].transform.position = Vector3.Lerp(objets[i].transform.position, posToBe, smoothing * Time.deltaTime);
+                    Vector3 posToBe = new Vector3(posXToBe, posYToBe, objets[i].transform.position.z);
+                    objets[i].transform.position = Vector3.Lerp(objets[i].transform.position, posToBe, smoothing * Time.deltaTime);
+                }
             }
         }
         previousPos = cam.position;

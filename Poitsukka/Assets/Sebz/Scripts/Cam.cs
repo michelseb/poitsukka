@@ -12,7 +12,7 @@ public class Cam : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey(KeyCode.LeftArrow))
+		/*if (Input.GetKey(KeyCode.LeftArrow))
         {
            transform.Translate( -speed * Time.deltaTime, 0, 0);
             a.speed = 10000;
@@ -22,6 +22,6 @@ public class Cam : MonoBehaviour {
         {
             transform.Translate(speed * Time.deltaTime, 0, 0);
             a.speed = -10000;
-        }
+        }*/
 	}
 }

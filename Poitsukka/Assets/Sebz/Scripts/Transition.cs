@@ -5,6 +5,7 @@ using UnityEngine;
 public class Transition : MonoBehaviour {
 
     Poitsukka poitsukka;
+    public Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -15,4 +16,10 @@ public class Transition : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        anim.SetTrigger("jump");
+        Debug.Log("Saute !");
+    }
 }

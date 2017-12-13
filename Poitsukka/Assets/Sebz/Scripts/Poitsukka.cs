@@ -7,7 +7,6 @@ public class Poitsukka : MonoBehaviour {
     Animator anim;
     Component[] bodyparts;
     
-    
 
     void Awake ()
     {
@@ -120,4 +119,10 @@ public class Poitsukka : MonoBehaviour {
         }
 
     }
+
+    /*public void orderBody()
+    {
+        int baseOrder = GameObject.Find()
+    }*/
+
 }

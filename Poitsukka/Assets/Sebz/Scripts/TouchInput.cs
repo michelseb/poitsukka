@@ -31,6 +31,8 @@ public class TouchInput : MonoBehaviour
     static Transform dragParent;
     public static int reachedOrder;
     public static GameObject itemBeingDragged;
+    public static bool allowedToMove;
+    public GameObject trunc;
     Aika a;
 
 
@@ -53,6 +55,8 @@ public class TouchInput : MonoBehaviour
         speed = camScript.speed;
         nbCheckpoints = checkpoints.Length;
         startposY = poitsukkaPos.transform.localPosition.y;
+        allowedToMove = true;
+        
     }
 
     // Update is called once per frame
@@ -61,94 +65,181 @@ public class TouchInput : MonoBehaviour
 
         dist = Vector2.Distance(poitsukkaPos.transform.position, destinationLocation);
         //J'ai touché quelque chose
-        if (Input.touchCount == 1)
+        if (allowedToMove)
         {
-            
-
-            if (Mathf.Abs(poitsukkaPos.transform.position.x-checkpoints[destMod].transform.position.x)<1)
+            if (Input.touchCount == 1)
             {
-                
-                if (destination < reachedCheckPoint)
-                {
-                    reachedCheckPoint = reachedCheckPoint - 1;
-                }
-                else
-                {
-                    reachedCheckPoint = reachedCheckPoint + 1;
-                }
-                reachedMod = reachedCheckPoint % nbCheckpoints;
-                reachedOrder = checkpoints[reachedMod].GetComponent<SpriteRenderer>().sortingOrder;
 
-                sortOrder(checkpoints[destMod].GetComponent<SpriteRenderer>().sortingOrder);
+                if (Mathf.Abs(poitsukkaPos.transform.position.x - checkpoints[destMod].transform.position.x) < 1)
+                {
+
+                    if (destination < reachedCheckPoint)
+                    {
+                        reachedCheckPoint = reachedCheckPoint - 1;
+                    }
+                    else
+                    {
+                        reachedCheckPoint = reachedCheckPoint + 1;
+                    }
+                    reachedMod = reachedCheckPoint % nbCheckpoints;
+                    reachedOrder = checkpoints[reachedMod].GetComponent<SpriteRenderer>().sortingOrder;
+
+                    trunc.GetComponent<SpriteRenderer>().sortingOrder = checkpoints[destMod].GetComponent<SpriteRenderer>().sortingOrder;
+                    //sortOrder(checkpoints[destMod].GetComponent<SpriteRenderer>().sortingOrder);
+
+                }
+
+                if (interacting == false && dragging == false)
+                {
+                    if (Input.GetTouch(0).position.x < Screen.width / 5 && Input.GetTouch(0).position.x > Screen.width / 8)
+                    {
+                        destination = reachedCheckPoint - 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
+                        a.speed = -450;
+                    }
+                    else if (Input.GetTouch(0).position.x > Screen.width * 4 / 5 && Input.GetTouch(0).position.x < Screen.width * 7 / 8)
+                    {
+                        destination = reachedCheckPoint + 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
+                        a.speed = 450;
+                    }
+                    else if (Input.GetTouch(0).position.x > Screen.width * 7 / 8)
+                    {
+                        destination = reachedCheckPoint + 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
+                        a.speed = 900;
+                    }
+                    else if (Input.GetTouch(0).position.x < Screen.width / 8)
+                    {
+                        destination = reachedCheckPoint - 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
+                        a.speed = -900;
+                    }
+                    else
+                    {
+                        poitsukkaScript.Idle();
+                        a.speed = 0;
+                    }
+                }
 
             }
-
-            if (interacting == false && dragging == false)
+            else if (Input.anyKey)
             {
-                if (Input.GetTouch(0).position.x < Screen.width / 5 && Input.GetTouch(0).position.x > Screen.width / 8)
-                {
-                    destination = reachedCheckPoint - 1;
-                    if (destination < 0)
-                    {
-                        destination = nbCheckpoints - 1;
-                        reachedCheckPoint = nbCheckpoints;
-                    }
-                    destMod = destination % nbCheckpoints;
-                    destinationLocation = checkpoints[destMod].transform.position;
-                    goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
-                    a.speed = -450;
-                }
-                else if (Input.GetTouch(0).position.x > Screen.width * 4 / 5 && Input.GetTouch(0).position.x < Screen.width * 7 / 8)
-                {
-                    destination = reachedCheckPoint + 1;
-                    if (destination < 0)
-                    {
-                        destination = nbCheckpoints - 1;
-                        reachedCheckPoint = nbCheckpoints;
-                    }
-                    destMod = destination % nbCheckpoints;
-                    destinationLocation = checkpoints[destMod].transform.position;
-                    goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
-                    a.speed = 450;
-                }
-                else if (Input.GetTouch(0).position.x > Screen.width * 7 / 8)
-                {
-                    destination = reachedCheckPoint + 1;
-                    if (destination < 0)
-                    {
-                        destination = nbCheckpoints - 1;
-                        reachedCheckPoint = nbCheckpoints;
-                    }
-                    destMod = destination % nbCheckpoints;
-                    destinationLocation = checkpoints[destMod].transform.position;
-                    goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
-                    a.speed = 900;
-                }
-                else if (Input.GetTouch(0).position.x < Screen.width / 8)
-                {
-                    destination = reachedCheckPoint - 1;
-                    if (destination < 0)
-                    {
-                        destination = nbCheckpoints - 1;
-                        reachedCheckPoint = nbCheckpoints;
-                    }
-                    destMod = destination % nbCheckpoints;
-                    destinationLocation = checkpoints[destMod].transform.position;
-                    goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
-                    a.speed = -900;
-                }
-                else
-                {
-                    poitsukkaScript.Idle();
-                    a.speed = 0;
-                }
-            }
 
-        }
-        else
-        {
-            poitsukkaScript.Idle();
-            a.speed = 0;
+                if (Mathf.Abs(poitsukkaPos.transform.position.x - checkpoints[destMod].transform.position.x) < 1)
+                {
+
+                    if (destination < reachedCheckPoint)
+                    {
+                        reachedCheckPoint = reachedCheckPoint - 1;
+                    }
+                    else
+                    {
+                        reachedCheckPoint = reachedCheckPoint + 1;
+                    }
+                    reachedMod = reachedCheckPoint % nbCheckpoints;
+                    reachedOrder = checkpoints[reachedMod].GetComponent<SpriteRenderer>().sortingOrder;
+
+                    trunc.GetComponent<SpriteRenderer>().sortingOrder = checkpoints[destMod].GetComponent<SpriteRenderer>().sortingOrder;
+                    //sortOrder(checkpoints[destMod].GetComponent<SpriteRenderer>().sortingOrder);
+
+                }
+
+                if (interacting == false && dragging == false)
+                {
+                    if (Input.GetKey("left"))
+                    {
+                        destination = reachedCheckPoint - 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
+                        a.speed = -450;
+                    }
+                    else if (Input.GetKey("right"))
+                    {
+                        destination = reachedCheckPoint + 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
+                        a.speed = 450;
+                    }
+                    /*else if (Input.GetTouch(0).position.x > Screen.width * 7 / 8)
+                    {
+                        destination = reachedCheckPoint + 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
+                        a.speed = 900;
+                    }
+                    else if (Input.GetTouch(0).position.x < Screen.width / 8)
+                    {
+                        destination = reachedCheckPoint - 1;
+                        if (destination < 0)
+                        {
+                            destination = nbCheckpoints - 1;
+                            reachedCheckPoint = nbCheckpoints;
+                        }
+                        destMod = destination % nbCheckpoints;
+                        destinationLocation = checkpoints[destMod].transform.position;
+                        goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
+                        a.speed = -900;
+                    }
+                    else
+                    {
+                        poitsukkaScript.Idle();
+                        a.speed = 0;
+                    }*/
+                }
+
+            }
+            else
+            {
+                poitsukkaScript.Idle();
+                a.speed = 0;
+            }
         }
     }
 
