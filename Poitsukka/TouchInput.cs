@@ -54,7 +54,7 @@ public class TouchInput : MonoBehaviour
     {
         speed = camScript.speed;
         nbCheckpoints = checkpoints.Length;
-        startposY = poitsukkaPos.transform.localPosition.y;
+        startposY = poitsukkaPos.transform.position.y;
         allowedToMove = true;
         
     }
@@ -202,7 +202,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
                         a.speed = 450;
                     }
-                    /*else if (Input.GetTouch(0).position.x > Screen.width * 7 / 8)
+                    else if (Input.GetKey(KeyCode.RightControl))
                     {
                         destination = reachedCheckPoint + 1;
                         if (destination < 0)
@@ -215,14 +215,9 @@ public class TouchInput : MonoBehaviour
                         goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
                         a.speed = 900;
                     }
-                    else if (Input.GetTouch(0).position.x < Screen.width / 8)
+                    else if (Input.GetKey(KeyCode.LeftControl))
                     {
-                        destination = reachedCheckPoint - 1;
-                        if (destination < 0)
-                        {
-                            destination = nbCheckpoints - 1;
-                            reachedCheckPoint = nbCheckpoints;
-                        }
+                        destination = reachedCheckPoint;
                         destMod = destination % nbCheckpoints;
                         destinationLocation = checkpoints[destMod].transform.position;
                         goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
@@ -232,7 +227,7 @@ public class TouchInput : MonoBehaviour
                     {
                         poitsukkaScript.Idle();
                         a.speed = 0;
-                    }*/
+                    }
                 }
 
             }
@@ -254,15 +249,15 @@ public class TouchInput : MonoBehaviour
 
 
         //float Direction = (checkpoint.y - poitsukkaPos.transform.position.y) * speed * Time.deltaTime / (1 + Mathf.Abs((checkpoint.y - provenance.y) / 10)); // ((checkpoints[destination].transform.position.x - poitsukka.transform.position.x));
-        Vector2 Direction = (checkpoint - provenance);
-        float scale = (poitsukkaPos.transform.localPosition.y / startposY);
+        Vector2 Direction = (checkpoint - new Vector2(poitsukkaPos.transform.position.x, poitsukkaPos.transform.position.y));
         float dist = Direction.magnitude;
         float goaly = Direction.y / dist * speed * Time.deltaTime;
         float goalx = Direction.x / dist * speed * Time.deltaTime;
         //poitsukka.transform.position = Vector2.Lerp(poitsukka.transform.position, checkpoints[destination].transform.position, speed * Time.deltaTime);
 
-        poitsukka.transform.Translate(new Vector3(0, goaly, 0));
-        poitsukka.transform.localScale = new Vector3(scale, scale, scale);
+        poitsukka.transform.Translate(new Vector3(0, goaly * 10, 0));
+        //float scale = (poitsukkaPos.transform.position.y / startposY);
+        //poitsukka.transform.localScale = new Vector3(scale, scale, scale);
 
         
         if (dir == 1)
