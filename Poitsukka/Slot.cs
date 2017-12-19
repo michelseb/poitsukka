@@ -32,10 +32,12 @@ public class Slot : MonoBehaviour, IDropHandler {
     {
         if (!item)
         {
-            transform.GetChild(1).GetComponent<Image>().enabled = true;
+            inventory.AddItemAt(inventory.items[DragHandeler.itemBeingDragged.transform.parent.GetComponent<Slot>().id], id);
+            inventory.RemoveItemAt(inventory.items[DragHandeler.itemBeingDragged.transform.parent.GetComponent<Slot>().id], DragHandeler.itemBeingDragged.transform.parent.GetComponent<Slot>().id);
+            /*transform.GetChild(1).GetComponent<Image>().enabled = true;
             transform.GetChild(1).GetComponent<Image>().sprite = DragHandeler.itemBeingDragged.transform.GetComponent<Image>().sprite;
             DragHandeler.itemBeingDragged.transform.GetComponent<Image>().sprite = null;
-            DragHandeler.itemBeingDragged.transform.GetComponent<Image>().enabled = false;
+            DragHandeler.itemBeingDragged.transform.GetComponent<Image>().enabled = false;*/
         }
         else {
             /*Sprite swap = new Sprite();

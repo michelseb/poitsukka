@@ -10,7 +10,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public static GameObject itemBeingDragged;
     public static Item lastDragged;
     public static Vector2 startPosition;
-    public static int activeSlot, destSlot;
+    public static int activeSlot;
     public static Vector2 scale;
     Inventory inv;
     //Interactable[] interactables;
@@ -20,6 +20,10 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         interactables = GameObject.FindObjectsOfType<Interactable>();
     }*/
 
+    void Start()
+    {
+        inv = FindObjectOfType<Inventory>();
+    }
 
     #region IBeginDragHandler implementation
     public void OnBeginDrag(PointerEventData eventData)
@@ -27,6 +31,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         scale = new Vector2(transform.localScale.x, transform.localScale.y);
         activeSlot = transform.parent.GetComponent<Slot>().id;
         itemBeingDragged = gameObject;
+        Debug.Log("Slot : " + activeSlot);
+        Debug.Log("Item" + inv.items[activeSlot]);
         lastDragged = inv.items[activeSlot];
         startPosition = transform.position;
         TouchInput.dragging = true;

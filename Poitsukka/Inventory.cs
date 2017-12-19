@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
                 items[i] = itemToAdd;
                 itemImages[i].sprite = itemToAdd.sprite;
                 itemImages[i].enabled = true;
+                Debug.Log("Objet récupéré : " + items[i]);
                 return;
             }
         }
@@ -32,13 +33,36 @@ public class Inventory : MonoBehaviour
         {
             if (items[i] == itemToRemove)
             {
+                Debug.Log("Objet perdu : " + items[i]);
                 items[i] = null;
                 itemImages[i].sprite = null;
                 itemImages[i].enabled = false;
+                
                 return;
             }
         }
     }
+
+    public void AddItemAt(Item itemToAdd, int index)
+    {
+        items[index] = itemToAdd;
+        itemImages[index].sprite = itemToAdd.sprite;
+        itemImages[index].enabled = true;
+        Debug.Log("Objet récupéré : " + items[index]);
+        return;
+    }
+
+
+    public void RemoveItemAt(Item itemToRemove, int index)
+    {
+        Debug.Log("Objet perdu : " + items[index]);
+        items[index] = null;
+        itemImages[index].sprite = null;
+        itemImages[index].enabled = false;
+
+        return;
+    }
+
 
     public void FusionItem(int slotA, int slotB)
     {

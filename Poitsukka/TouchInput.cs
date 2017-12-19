@@ -31,7 +31,7 @@ public class TouchInput : MonoBehaviour
     static Transform dragParent;
     public static int reachedOrder;
     public static GameObject itemBeingDragged;
-    public static bool allowedToMove;
+    public static bool allowedToMove, allowedRight = true, allowedLeft = true;
     public GameObject trunc;
     Aika a;
 
@@ -91,7 +91,7 @@ public class TouchInput : MonoBehaviour
 
                 if (interacting == false && dragging == false)
                 {
-                    if (Input.GetTouch(0).position.x < Screen.width / 5 && Input.GetTouch(0).position.x > Screen.width / 8)
+                    if (Input.GetTouch(0).position.x < Screen.width / 5 && Input.GetTouch(0).position.x > Screen.width / 8 && allowedLeft)
                     {
                         destination = reachedCheckPoint - 1;
                         if (destination < 0)
@@ -104,7 +104,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
                         a.speed = -450;
                     }
-                    else if (Input.GetTouch(0).position.x > Screen.width * 4 / 5 && Input.GetTouch(0).position.x < Screen.width * 7 / 8)
+                    else if (Input.GetTouch(0).position.x > Screen.width * 4 / 5 && Input.GetTouch(0).position.x < Screen.width * 7 / 8 && allowedRight)
                     {
                         destination = reachedCheckPoint + 1;
                         if (destination < 0)
@@ -117,7 +117,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
                         a.speed = 450;
                     }
-                    else if (Input.GetTouch(0).position.x > Screen.width * 7 / 8)
+                    else if (Input.GetTouch(0).position.x > Screen.width * 7 / 8 && allowedRight)
                     {
                         destination = reachedCheckPoint + 1;
                         if (destination < 0)
@@ -130,7 +130,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
                         a.speed = 900;
                     }
-                    else if (Input.GetTouch(0).position.x < Screen.width / 8)
+                    else if (Input.GetTouch(0).position.x < Screen.width / 8 && allowedLeft)
                     {
                         destination = reachedCheckPoint - 1;
                         if (destination < 0)
@@ -180,7 +180,7 @@ public class TouchInput : MonoBehaviour
 
                 if (interacting == false && dragging == false)
                 {
-                    if (Input.GetKey("left"))
+                    if (Input.GetKey("left") && allowedLeft)
                     {
                         destination = reachedCheckPoint;
                         
@@ -189,7 +189,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(-1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
                         a.speed = -450;
                     }
-                    else if (Input.GetKey("right"))
+                    else if (Input.GetKey("right") && allowedRight)
                     {
                         destination = reachedCheckPoint + 1;
                         if (destination < 0)
@@ -202,7 +202,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 0);
                         a.speed = 450;
                     }
-                    else if (Input.GetKey(KeyCode.RightControl))
+                    else if (Input.GetKey(KeyCode.RightControl) && allowedRight)
                     {
                         destination = reachedCheckPoint + 1;
                         if (destination < 0)
@@ -215,7 +215,7 @@ public class TouchInput : MonoBehaviour
                         goToGoal(1, destinationLocation, checkpoints[reachedMod].transform.position, 1);
                         a.speed = 900;
                     }
-                    else if (Input.GetKey(KeyCode.LeftControl))
+                    else if (Input.GetKey(KeyCode.LeftControl) && allowedLeft)
                     {
                         destination = reachedCheckPoint;
                         destMod = destination % nbCheckpoints;

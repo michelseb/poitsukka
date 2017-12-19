@@ -10,8 +10,12 @@ public class Interactable : MonoBehaviour
     
     bool itemToCheck;
     GameObject givenItem;
+    PlayerMovement p;
 
-    
+    void Start()
+    {
+        p = FindObjectOfType<PlayerMovement>();
+    }
 
     void Update()
     {
@@ -22,8 +26,7 @@ public class Interactable : MonoBehaviour
 {
                 if (i == DragHandeler.lastDragged)
                 {
-                    Debug.Log("Okay");
-                    Interact();
+                    p.OnInteractableClick(this);
                 }
 
             }
